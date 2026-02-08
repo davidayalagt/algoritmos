@@ -1,5 +1,28 @@
 @startuml ""
 
+start
 
+:opcion = "No";
+
+repeat
+    :Escribir("Ingrese su edad");
+    :Leer(edad);
+    :Escribir("Ingrese credencial");
+    :Leer(credencial);
+    if (edad < 18) then (Sí)
+        :Escribir("Acceso denegado");
+    else (No)
+        if (credencial == "valida") then (Sí)
+            :Escribir("Acceso permitido");
+        else (No)
+            :Escribir("Acceso denegado");
+        endif
+    endif
+    :Escribir("¿Desea evaluar otra persona? (Sí/No)");
+    :Leer(opcion);
+repeat while (opcion == "Sí")
+
+
+stop
 
 @enduml

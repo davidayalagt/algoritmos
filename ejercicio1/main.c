@@ -22,12 +22,9 @@ enum Opcion DeseaEvaluarOtraPersona() {
 int LeerEdadDePersona() {
     char buffer[10];
     char *lastPosition;
-
     strcpy(buffer,"");
-
     printf("\nDigite a edad: ");
     scanf("%s", buffer);
-
     const long value = strtol(buffer, &lastPosition, 10);
     return (int)value;
 }
